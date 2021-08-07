@@ -5,15 +5,26 @@ A Golf Club System that contains nearly everything I golf club will require to f
 Contains:
 
   Driving Range Booking
+  
   Golf Course Booking
+  
     Individual Hole Bookings
+    
   Item Stock Storing
+  
   Item Selling
+  
   Item Lending
+  
   Report Generating
+  
   Weather API
+  
   Login Feature
+  
   Mailing
+  
     Adding Attatchments 
+    
     Send to all members
   
