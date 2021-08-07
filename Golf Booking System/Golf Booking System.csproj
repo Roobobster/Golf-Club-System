@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{501AC520-65F8-43D2-93EA-85ACE7C76922}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Golf_Booking_System</RootNamespace>
+    <AssemblyName>Golf Booking System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Golf_Booking_System.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code Files\Reports\Word Documents.cs" />
+    <Compile Include="Code Files\Reports\Data Value Generator.cs" />
+    <Compile Include="Forms\Login Forms\Add Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Add Login.Designer.cs">
+      <DependentUpon>Add Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Change Login Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Change Login Password.Designer.cs">
+      <DependentUpon>Change Login Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code Files\Database\Database Tables\Golf Course Bookings.cs" />
+    <Compile Include="Code Files\Database\Database Tables\Tokens.cs" />
+    <Compile Include="Code Files\Input Box.cs" />
+    <Compile Include="Code Files\Database\Database Tables\Item Sales.cs" />
+    <Compile Include="Code Files\Database\Database Tables\Members.cs" />
+    <Compile Include="Code Files\Database\Database.cs" />
+    <Compile Include="Code Files\Global Variables.cs" />
+    <Compile Include="Code Files\Database\Database Tables\Driving Range Bookings .cs" />
+    <Compile Include="Code Files\Database\Database Tables\Purchases.cs" />
+    <Compile Include="Code Files\WeatherAPI.cs" />
+    <Compile Include="Code Files\Email.cs" />
+    <Compile Include="Code Files\FileHandling.cs" />
+    <Compile Include="Forms\Login Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code Files\Security.cs" />
+    <Compile Include="Forms\Mail Forms\Compose Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mail Forms\Compose Email.Designer.cs">
+      <DependentUpon>Compose Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mail Forms\Mailing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mail Forms\Mailing.Designer.cs">
+      <DependentUpon>Mailing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Add Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Add Item.Designer.cs">
+      <DependentUpon>Add Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Edit Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Edit Items.Designer.cs">
+      <DependentUpon>Edit Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Item Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Item Menu.Designer.cs">
+      <DependentUpon>Item Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code Files\Database\Database Tables\Items.cs" />
+    <Compile Include="Forms\Membership Forms\Add Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Add Member.Designer.cs">
+      <DependentUpon>Add Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Login Options Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Login Options Menu.Designer.cs">
+      <DependentUpon>Login Options Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Create Analyses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Create Analyses.Designer.cs">
+      <DependentUpon>Create Analyses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Graph Dislayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Graph Dislayer.Designer.cs">
+      <DependentUpon>Graph Dislayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Booking Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Booking Menu.Designer.cs">
+      <DependentUpon>Booking Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Driving Range Bookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Driving Range Bookings.Designer.cs">
+      <DependentUpon>Driving Range Bookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Edit Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Edit Member.Designer.cs">
+      <DependentUpon>Edit Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Golf Course Bookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Golf Course Bookings.Designer.cs">
+      <DependentUpon>Golf Course Bookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Item Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Item Sales.Designer.cs">
+      <DependentUpon>Item Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other Forms\Main Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other Forms\Main Menu.Designer.cs">
+      <DependentUpon>Main Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Member Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Member Menu.Designer.cs">
+      <DependentUpon>Member Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Membership Forms\Remove Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Remove Member.Designer.cs">
+      <DependentUpon>Remove Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Remove Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Item Forms\Remove Item.Designer.cs">
+      <DependentUpon>Remove Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Remove Member Bookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership Forms\Remove Member Bookings.Designer.cs">
+      <DependentUpon>Remove Member Bookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Remove Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login Forms\Remove Login.Designer.cs">
+      <DependentUpon>Remove Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Sale Report Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Report Forms\Sale Report Menu.Designer.cs">
+      <DependentUpon>Sale Report Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Sales Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Forms\Sales Menu.Designer.cs">
+      <DependentUpon>Sales Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code Files\Validation Code Files\Validation.cs" />
+    <Compile Include="Code Files\Validation Code Files\Searching Sorting.cs" />
+    <Compile Include="Code Files\Reports\Analysis.cs" />
+    <EmbeddedResource Include="Forms\Login Forms\Add Login.resx">
+      <DependentUpon>Add Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login Forms\Change Login Password.resx">
+      <DependentUpon>Change Login Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mail Forms\Compose Email.resx">
+      <DependentUpon>Compose Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Mail Forms\Mailing.resx">
+      <DependentUpon>Mailing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Item Forms\Add Item.resx">
+      <DependentUpon>Add Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Item Forms\Edit Items.resx">
+      <DependentUpon>Edit Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Item Forms\Item Menu.resx">
+      <DependentUpon>Item Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership Forms\Add Member.resx">
+      <DependentUpon>Add Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership Forms\Remove Member Bookings.resx">
+      <DependentUpon>Remove Member Bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login Forms\Login Options Menu.resx">
+      <DependentUpon>Login Options Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Forms\Booking Menu.resx">
+      <DependentUpon>Booking Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Forms\Driving Range Bookings.resx">
+      <DependentUpon>Driving Range Bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership Forms\Edit Member.resx">
+      <DependentUpon>Edit Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Forms\Golf Course Bookings.resx">
+      <DependentUpon>Golf Course Bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Forms\Item Sales.resx">
+      <DependentUpon>Item Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other Forms\Main Menu.resx">
+      <DependentUpon>Main Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership Forms\Member Menu.resx">
+      <DependentUpon>Member Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Report Forms\Create Analyses.resx">
+      <DependentUpon>Create Analyses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Report Forms\Graph Dislayer.resx">
+      <DependentUpon>Graph Dislayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership Forms\Remove Member.resx">
+      <DependentUpon>Remove Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Item Forms\Remove Item.resx">
+      <DependentUpon>Remove Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login Forms\Remove Login.resx">
+      <DependentUpon>Remove Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Report Forms\Sale Report Menu.resx">
+      <DependentUpon>Sale Report Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Forms\Sales Menu.resx">
+      <DependentUpon>Sales Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Golf Course Holes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookedHole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Available_Hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Selected_Hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind Speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Direction Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thermometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
